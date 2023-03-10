@@ -1,0 +1,459 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body{
+    background: #1e1e20;
+}
+
+header{
+    top: 25px;    
+}
+
+.title{
+    display: flex;
+    gap: 15px;
+    text-align: center;
+    color: #D7DBCA;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000000
+}
+
+.title h1{
+    z-index: 2;
+    font-family: 'Creepster', cursive;
+    font-size: 110px;
+    letter-spacing: 0.05em;
+}
+
+.title :first-child{
+    color: #FE581E;
+}
+
+section{
+    margin-top: 30px;
+    height: 75vh;
+}
+
+.box{
+    z-index: 3;
+    position: relative;
+    width: 360px;
+    height: 375px;
+    background: #111111;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box:hover{
+    box-shadow: 0 0 15px 5px #3f3f3f;
+    transition: .7s;
+}
+
+.box.active{
+    z-index: 3;
+    margin-top: 40px;
+    position: relative;
+    width: 360px;
+    height: 519px;
+    background: #111111;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box form{
+    position: absolute;
+    inset: 4px;
+    background: #161616;
+    padding: 40px 25px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.box.active form{
+    position: absolute;
+    inset: 4px;
+    background: #161616;
+    padding: 40px 25px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.box form h2{
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin-top: -20px;
+}
+
+.box form .inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+
+.box form .inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.box form .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.3s;
+}
+
+.box form .inputBox input:valid ~ span,
+.box form .inputBox input:focus ~ span{
+    color: #fff;
+    font-size: 0.75em;
+    transform: translateY(-34px);
+}
+
+.box form .inputBox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.box form .inputBox input:valid ~ i,
+.box form .inputBox input:focus ~ i{
+    height: 44px;
+}
+
+.box form .links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box form .links a{
+    margin: 20px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.box.active form .links a{
+    margin: 40px 0;
+    font-size: 0.90em;
+    color: #cfcfcf;
+    text-decoration: none;
+}
+
+.box.active form .links a:hover{
+    text-decoration: none;
+    text-shadow: 0 0 10px #fff;
+}
+
+.box form .links a:hover,
+.box form .links a:nth-child(2){
+    color: #fff;
+}
+
+.box form input[type="submit"]{
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #f5f5f5;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+}
+
+.box.active form input[type="submit"]{
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #f5f5f5;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: -70px;
+}
+
+.box form input[type="submit"]:active{
+    opacity: 0.8;
+}
+
+.box form input[type="submit"]:hover{
+    background: #fff;
+    box-shadow: 0 0 12px #fff;
+    transition: 0.4s;
+}
+
+.box .formbox.register{
+    transform: translateY(-590px);
+    transition: transform .6s ease;
+}
+
+.box.active .formbox.register{
+    transform: translateY(0);
+    transition-delay: .7s;
+}
+
+.box .formbox.login{
+    transform: translateY(0px);
+    transition: transform .7s ease;
+}
+
+.box.active .formbox.login{
+    transform: translateY(590px);
+    transition-delay: 0s;
+}
+
+@media (max-width: 880px){
+    header{
+        position: absolute;
+        top: 30px; 
+    }
+
+    header .title h1{
+        font-size: 90px;
+    }
+
+    section{
+        margin-top: 100px;
+        height: 75vh;
+    }
+
+    .box{
+        width: 330px;
+        height: 347px;
+    }
+
+    .box.active{
+        margin-top: 40px;
+        width: 330px;
+        height: 483px;
+    }
+
+    .box form,
+    .box.active form{
+        padding: 25px 11px;
+    }
+
+    .box.active form .links a{
+        margin: 35px 0;
+    }
+
+    .box.active form input[type="submit"]{
+        padding: 7px 25px;
+        margin-top: -65px;
+    }
+}
+
+@media (max-width: 760px){
+    header .title h1{
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 600px){
+    header{
+        top: 30px; 
+    }
+    
+    header .title h1{
+        font-size: 60px;
+    }
+
+    .box{
+        width: 300px;
+        height: 330px;
+    }
+    
+    .box.active{
+        margin-top: 27px;
+        width: 300px;
+        height: 453px;
+    }
+
+    .box form,
+    .box.active form{
+        padding: 25px 11px;
+    }
+
+    .box form h2{
+        padding-bottom: 20px;
+    }
+    
+    .box form .inputBox{
+        width: 272px;
+        margin-top: 23px;
+    }
+
+    .box form .inputBox span,
+    .box.active form .inputBox span{
+        font-size: 0.95em;
+    }
+
+    .box form .links a{
+        margin: 20px 0;
+    }
+
+    .box.active form .links a{
+        margin: 35px 0;
+    }
+
+    .box form input[type="submit"]{
+        padding: 7px 25px;
+        margin-top: 0px;
+    }
+
+    .box.active form input[type="submit"]{
+        margin-top: -65px;
+    }
+}
+
+@media (max-width: 500px){
+    header{
+        top: 20px; 
+    }
+
+    header .title h1{
+        font-size: 50px;
+    }
+
+    section{
+        margin-top: 20px;
+    }
+
+    .box.active{
+        margin-top: 15px;
+    }
+
+    .box form .inputBox span,
+    .box.active form .inputBox span{
+        font-size: 0.9em;
+    }
+
+    .box form .inputBox i{
+        position: absolute;
+        left: 0;
+        bottom: 5px;
+        width: 100%;
+    }
+
+    .box form .inputBox input:valid ~ i,
+    .box form .inputBox input:focus ~ i{
+        height: 35px;
+    }
+}
+
+@media (max-width: 400px){
+    header{
+        top: 10px; 
+    }
+
+    header .title h1{
+        font-size: 40px;
+    }
+
+    section{
+        margin-top: -10px;
+    }
+
+    .box{
+        width: 285px;
+        height: 329px;
+    }
+    
+    .box.active{
+        width: 285px;
+    }
+
+    .box form,
+    .box.active form{
+        padding: 25px 10px;
+    }
+
+    .box form .inputBox span,
+    .box.active form .inputBox span{
+        font-size: 0.87em;
+    }
+
+    .box form .inputBox{
+        width: 259px;
+    }
+}
+
+@media (max-width: 320px){
+    header{
+        top: 30px; 
+    }
+
+    header .title h1{
+        font-size: 30px;
+    }
+
+    .box{
+        width: 250px;
+        height: 316px;
+    }
+    
+    .box.active{
+        width: 250px;
+        height: 440px;
+    }
+
+    .box form,
+    .box.active form{
+        padding: 25px 8px;
+    }
+
+    .box form h2{
+        padding-bottom: 10px;
+    }
+
+    .box form .inputBox{
+        width: 225px;
+    }
+
+    .box form .inputBox span,
+    .box.active form .inputBox span{
+        font-size: 0.83em;
+    }
+}
