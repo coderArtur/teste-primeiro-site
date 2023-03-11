@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    min-height: 100vh;
+    background: #1e1e20;
+}
+
+.box{
+    max-width: 500px;
+    background-color: #000000;
+    padding: 10px 30px 10px 30px;
+    width: 100%;
+    border-radius: 5px;
+}
+.box:hover{
+    box-shadow: 0 0 15px 5px #3f3f3f;
+    transition: .7s;
+}
+
+form:hover{
+    transform: scale(1.03);
+    transition: .5s;
+}
+
+.upload-area-title{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.uploadlabel{
+    width: 100%;
+    min-height: 100px;
+    background: #bbbbbb0d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px dashed #d3d3d382;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.uploadlabel span{
+    font-size: 60px;
+    color: #ffffff;
+}
+.uploadlabel p{
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+}
+.uploaded{
+    margin: 30px 0 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #dbdbdb;
+}
+
+.showfilebox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 0 10px 0;
+    padding: 10px 15px;
+    box-shadow: #ffffff0d 0px 0px 0px 1px, #e9e8e83d 0px 0px 0px 1px inset;
+    border-radius: 5px;
+}
+.showfilebox .left{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filetype{
+    background: #ffffff;
+    color: #000000;
+    padding: 2px 8px;
+    font-size: 11px;
+    text-transform: capitalize;
+    font-weight: 800;
+    border-radius: 3px;
+}
+
+.left h3{
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+}
+.right span{
+    background: #ffffff;
+    color: #000000;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.right span:hover{
+    background: #cecece;
+}
