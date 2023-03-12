@@ -14,7 +14,7 @@ main{
 }
 
 nav{
-    background-color: #111111;
+    background-color: #080808;
     position: fixed;
     width: 100%;
     top: 0;
@@ -311,7 +311,6 @@ form:hover{
         margin: 0px 20px;
     }
 }
-
 @media (max-width: 880px){
     nav{
         padding: 10px 2%;
@@ -370,7 +369,6 @@ form:hover{
         right: -2%;
     }
 }
-
 @media (max-width: 550px){
     .navbar{
         width: 130px;
@@ -451,7 +449,6 @@ form:hover{
         max-width: 250px;
     }
 }
-
 @media (max-width: 411px){
     .start[type="submit"]{
         padding: 3px 0px;
@@ -472,7 +469,6 @@ form:hover{
         max-width: 230px;
     }  
 }
-
 @media (max-width: 391px){
     .start[type="submit"]{
         margin-left: 77%;
@@ -482,7 +478,6 @@ form:hover{
         max-width: 220px;
     }  
 }
-
 @media (max-width: 381px){
     .start[type="submit"]{
         width: 55px;
@@ -493,7 +488,6 @@ form:hover{
         max-width: 185px;
     }  
 }
-
 @media (max-width: 350px){
     .box{
         padding: 10px 20px 10px 20px;
@@ -536,7 +530,6 @@ form:hover{
         max-width: 130px;
     }
 }
-
 @media (max-width: 330px){
     .box{
         padding: 5px 10px 5px 10px;
@@ -579,7 +572,6 @@ form:hover{
         max-width: 190px;
     }
 }
-
 @media (max-width: 311px){
     .start[type="submit"]{
         font-size: 0.75rem;
@@ -612,7 +604,6 @@ form:hover{
         max-width: 110px;
     }  
 }
-
 @media (max-width: 260px){
     .start[type="submit"]{
         margin-left: 76%;
