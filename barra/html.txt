@@ -1,0 +1,24 @@
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+    <section>
+        <header>
+            <a href="#" class="logo"><i class="ri-home-4-fill"></i><span>CS</span></a>
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+    
+            <div class="main">
+                <a href="#" class="user"></i>Sign in</a>
+                <a href="#">Register</a>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+    
+        </header>
+    </section>

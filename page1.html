@@ -9,38 +9,74 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>Page 1</title>
 </head>
-<body>
-    <div class="wrapper">
-        <div class="box">
-            <div class="input-bx">
-                <h2 class="upload-area-title">Upload File</h2>
-                <form action="">
-                    <input type="file" id="upload" accept=".txt" hidden>
-                    <label for="upload" class="uploadlabel">
-                        <span><i class="fa fa-cloud-upload"></i></span>
-                        <p>Click To Upload</p>
-                    </label>
-                </form>
-            </div>
-
-            <div id="filewrapper">
-                <h3 class="uploaded">Uploaded Documents:</h3>
-                <!--<div class="showfilebox">
-                    <div class="left">
-                        <span class="filetype">Txt</span>
-                        <h3>exemplo.txt</h3>
-                    </div>
-                    <div class="right">
-                        <span>&#215;</span>
-                    </div>
-                </div>-->
-            </div>
-
+<main>
+    <body>
+        <div class="header-bar">
+            <header>
+                <a href="page1.html" class="logo"><img src="img/CS circulo.png" alt="Chernobyl Scociety Logo"><span>CS</span></a>
+                <ul class="navbar">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Scripts</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+        
+                <div class="main">
+                    <a href="index.html" class="logout"></i>Logout</a>
+                    <div class="bx bx-menu" id="menu-icon"></div>
+                </div>
+        
+            </header>
         </div>
-    </div>
+    
+        <div class="wrapper">
+            <div class="box">
+                <div class="input-bx">
+                    <h2 class="upload-area-title">Server Name</h2>
+                    <div class="inputBox">
+                        <input type="text" required="required">
+                        <span>Server Name</span>
+                        <i></i>
+                    </div>
+                    <h2 class="upload-area-title">Upload File</h2>
+                    <form action="">
+                        <input type="file" id="upload" accept=".txt" hidden>
+                        <label for="upload" class="uploadlabel">
+                            <span><i class="fa fa-cloud-upload"></i></span>
+                            <p>Click To Upload</p>
+                        </label>
+                    </form>
+                </div>
+    
+                <div id="filewrapper">
+                    <h3 class="uploaded">Uploaded Documents:</h3>
+    
+    
+                   <!-- <div class="showfilebox">
+                        <div class="left">
+                            <span class="filetype">Txt</span>
+                            <div class="cortar">
+                                <h3>exeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamplo.txt</h3>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <span>&#215;</span>
+                        </div>
+                    </div>-->
+    
+    
+                </div>
+    
+            </div>
+        </div>
+    
+    <script src="js/page1.js"></script>
+    </body>
+</main>
 
-<script src="js/page1.js"></script>
-</body>
 </html>
