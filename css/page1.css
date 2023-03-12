@@ -213,6 +213,26 @@ form:hover{
     font-size: 17px;
     font-weight: 600;
 }
+
+.start[type="submit"]{
+    border: none;
+    outline: none;
+    padding: 4px 0px;
+    background: #f5f5f5;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 70px;
+    margin-top: 25px;
+    margin-left: 84%;
+}
+
+.start[type="submit"]:hover{
+    background: #fff;
+    box-shadow: 0 0 8px #fff;
+    transition: 0.4s;
+}
 .uploaded{
     margin: -10px 0 8px 8px;
     font-size: 14.5px;
@@ -223,7 +243,7 @@ form:hover{
     font-size: 16px;
     color: #e9e8e8;
     text-decoration: underline;
-    margin-top: 20px;
+    margin-top: -30px;
 }
 
 .showfilebox{
@@ -401,13 +421,26 @@ form:hover{
     .uploadlabel p{
         font-size: 13px;
     }
+
+    .start[type="submit"]{
+        padding: 4px 0px;
+        margin-top: 25px;
+        margin-left: 80%;
+    }
+    
+    .start[type="submit"]:hover{
+        background: #fff;
+        box-shadow: 0 0 8px #fff;
+        transition: 0.4s;
+    }
+
     .uploaded{
         margin: -10px 0 8px 8px;
         font-size: 13px;
     }
     #filewrapper .uploaded:first-child{
         font-size: 14px;
-        margin-top: 10px;
+        margin-top: -30px;
     }
     
     .showfilebox{
@@ -420,16 +453,42 @@ form:hover{
 }
 
 @media (max-width: 411px){
+    .start[type="submit"]{
+        padding: 3px 0px;
+        margin-top: 20px;
+        margin-left: 78%;
+    }
+
+    .uploaded{
+        margin: -5px 0 8px 8px;
+        font-size: 13px;
+    }
+    #filewrapper .uploaded:first-child{
+        font-size: 14px;
+        margin-top: -30px;
+    }
+
     .left h3{
         max-width: 230px;
     }  
 }
+
 @media (max-width: 391px){
+    .start[type="submit"]{
+        margin-left: 77%;
+    }
+
     .left h3{
         max-width: 220px;
     }  
 }
+
 @media (max-width: 381px){
+    .start[type="submit"]{
+        width: 55px;
+        margin-left: 80%;
+    }
+
     .left h3{
         max-width: 185px;
     }  
@@ -465,7 +524,7 @@ form:hover{
     }
     #filewrapper .uploaded:first-child{
         font-size: 13px;
-        margin-top: 7px;
+        margin-top: -30px;
     }
     
     .showfilebox{
@@ -508,7 +567,7 @@ form:hover{
     }
     #filewrapper .uploaded:first-child{
         font-size: 12px;
-        margin-top: 7px;
+        margin-top: -30px;
     }
     
     .showfilebox{
@@ -522,6 +581,16 @@ form:hover{
 }
 
 @media (max-width: 311px){
+    .start[type="submit"]{
+        font-size: 0.75rem;
+        padding: 1px 0px;
+        width: 47px;
+        margin-left: 81%;
+        margin-top: 15px;
+    }
+    #filewrapper .uploaded:first-child{
+        margin-top: -23px;
+    }
     .left h3{
         max-width: 170px;
     }  
@@ -531,8 +600,22 @@ form:hover{
         max-width: 140px;
     }  
 }
-@media (max-width: 261px){
+@media (max-width: 275px){
+    .start[type="submit"]{
+        margin-left: 78%;
+        margin-top: 14px;
+    }
+    #filewrapper .uploaded:first-child{
+        margin-top: 1px;
+    }
     .left h3{
         max-width: 110px;
     }  
+}
+
+@media (max-width: 260px){
+    .start[type="submit"]{
+        margin-left: 76%;
+        margin-top: 10px; 
+    }
 }
