@@ -90,6 +90,42 @@ nav{
     display: none;
 }
 
+.location{
+    position: absolute;
+    display: flex;
+    margin-top: 120px;
+    margin-left: 30px;
+    gap: 10px;
+    z-index: 5;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 0 0 1px #dbdbdb;
+}
+.location .local{
+    color: rgb(255, 255, 255);
+
+}
+.location .page-title{
+    color: rgb(211, 211, 211);
+    text-decoration: underline;
+}
+
+.description{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    display: block;
+    margin-top: 220px;
+    margin-left: 70px;
+    gap: 10px;
+    z-index: 5;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.description p:nth-child(2){
+    color: #c0c0c0;
+}
+
 
 section{
     height: 50vh;
@@ -132,66 +168,6 @@ form:hover{
     font-weight: 600;
 }
 
-.upload-area-title:first-child{
-    margin-bottom: 0px;
-}
-
-.inputBox{
-    position: relative;
-    width: 100%;
-    margin-top: 0px;
-    margin-bottom: 30px;
-}
-
-.inputBox input{
-    position: relative;
-    width: 100%;
-    padding: 10px 10px 2px;
-    background: transparent;
-    outline: none;
-    border: none;
-    box-shadow: none;
-    color: #23242a;
-    font-size: 1em;
-    letter-spacing: 0.05em;
-    transition: 0.3s;
-    z-index: 8;
-}
-
-.inputBox span{
-    position: absolute;
-    left: 5px;
-    padding: 10px 0px 10px;
-    pointer-events: none;
-    color: #8f8f8f;
-    font-size: 1em;
-    letter-spacing: 0.05em;
-    transition: 0.3s;
-}
-
-.inputBox input:valid ~ span,
-.inputBox input:focus ~ span{
-    display: none;
-}
-
-.inputBox i{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    border-radius: 4px;
-    overflow: hidden;
-    transition: 0.3s;
-    pointer-events: none;
-}
-
-.inputBox input:valid ~ i,
-.inputBox input:focus ~ i{
-    height: 30px;
-}
-
 .uploadlabel{
     width: 100%;
     min-height: 100px;
@@ -214,7 +190,16 @@ form:hover{
     font-weight: 600;
 }
 
+.startar{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-between;
+}
 .start[type="submit"]{
+    display: inline-block;
+    justify-content: space-between;
     border: none;
     outline: none;
     padding: 4px 0px;
@@ -224,15 +209,17 @@ form:hover{
     border-radius: 4px;
     font-weight: 600;
     width: 70px;
-    margin-top: 25px;
-    margin-left: 84%;
+    margin-top: 20px;
 }
-
 .start[type="submit"]:hover{
     background: #fff;
     box-shadow: 0 0 8px #fff;
     transition: 0.4s;
 }
+.start[type="submit"]:nth-child(2){
+    background: #c0c0c0;
+}
+
 .uploaded{
     margin: -10px 0 8px 8px;
     font-size: 14.5px;
@@ -243,7 +230,7 @@ form:hover{
     font-size: 16px;
     color: #e9e8e8;
     text-decoration: underline;
-    margin-top: -30px;
+    margin-top: 7px;
 }
 
 .showfilebox{
@@ -391,23 +378,29 @@ form:hover{
         right: -2%;
     }
 
-
+    .location{
+        margin-top: 100px;
+        margin-left: 30px;
+        gap: 8px;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    
+    .description{
+        margin-top: 170px;
+        margin-left: 50px;
+        font-size: .85rem;
+    }
+    
 
     .box{
-        margin-top: 200px;
+        margin-top: 230px;
         max-width: 400px;
     }
     
     .upload-area-title{
         margin-bottom: 5px;
         font-size: 18px;
-    }
-    
-    .inputBox{
-        margin-bottom: 10px;
-    }
-    .inputBox span{
-        font-size: .85em;
     }
     
     .uploadlabel{
@@ -422,8 +415,7 @@ form:hover{
 
     .start[type="submit"]{
         padding: 4px 0px;
-        margin-top: 25px;
-        margin-left: 80%;
+        margin-top: 20px;
     }
     
     .start[type="submit"]:hover{
@@ -438,7 +430,7 @@ form:hover{
     }
     #filewrapper .uploaded:first-child{
         font-size: 14px;
-        margin-top: -30px;
+        margin-top: 10px;
     }
     
     .showfilebox{
@@ -450,10 +442,33 @@ form:hover{
     }
 }
 @media (max-width: 411px){
+    .location{
+        margin-top: 95px;
+        margin-left: 25px;
+        gap: 6px;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    
+    .description{
+        margin-top: 150px;
+        margin-left: 40px;
+        font-size: .85rem;
+    }
+
+    .box{
+        margin-top: 205px;
+    }
+
+    .startar{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
     .start[type="submit"]{
+        font-size: .75rem;
         padding: 3px 0px;
+        width: 60px;
         margin-top: 20px;
-        margin-left: 78%;
     }
 
     .uploaded{
@@ -462,7 +477,7 @@ form:hover{
     }
     #filewrapper .uploaded:first-child{
         font-size: 14px;
-        margin-top: -30px;
+        margin-top: 10px;
     }
 
     .left h3{
@@ -470,8 +485,20 @@ form:hover{
     }  
 }
 @media (max-width: 391px){
-    .start[type="submit"]{
-        margin-left: 77%;
+    .location{
+        margin-top: 85px;
+        margin-left: 25px;
+        gap: 6px;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    
+    .description{
+        margin-top: 140px;
+    }
+
+    .box{
+        margin-top: 198px;
     }
 
     .left h3{
@@ -479,9 +506,23 @@ form:hover{
     }  
 }
 @media (max-width: 381px){
+    .location{
+        margin-top: 95px;
+        margin-left: 20px;
+    }
+    
+    .description{
+        margin-top: 140px;
+        margin-left: 30px;
+        font-size: .8rem;
+    }
+
+    .box{
+        margin-top: 190px;
+    }
+
     .start[type="submit"]{
         width: 55px;
-        margin-left: 80%;
     }
 
     .left h3{
@@ -489,18 +530,22 @@ form:hover{
     }  
 }
 @media (max-width: 350px){
+    .location{
+        margin-left: 10px;
+    }
+
+    .description{
+        margin-left: 20px;
+    }
+
     .box{
         padding: 10px 20px 10px 20px;
-        margin-top: 150px;
+        margin-top: 190px;
         max-width: 350px;
     }
     
     .upload-area-title{
         font-size: 17px;
-    }
-    
-    .inputBox{
-        margin-bottom: 7px;
     }
     
     .uploadlabel{
@@ -518,7 +563,7 @@ form:hover{
     }
     #filewrapper .uploaded:first-child{
         font-size: 13px;
-        margin-top: -30px;
+        margin-top: 10px;
     }
     
     .showfilebox{
@@ -527,22 +572,25 @@ form:hover{
     
     .left h3{
         font-size: 10px;
-        max-width: 130px;
+        max-width: 185px;
     }
 }
 @media (max-width: 330px){
+    .location{
+        font-size: 1.15rem;
+    }
+
+    .description{
+        font-size: .75rem;
+    }
+
     .box{
         padding: 5px 10px 5px 10px;
-        margin-top: 150px;
         max-width: 350px;
     }
     
     .upload-area-title{
         font-size: 15px;
-    }
-    
-    .inputBox{
-        margin-bottom: 7px;
     }
     
     .uploadlabel{
@@ -560,7 +608,7 @@ form:hover{
     }
     #filewrapper .uploaded:first-child{
         font-size: 12px;
-        margin-top: -30px;
+        margin-top: 10px;
     }
     
     .showfilebox{
@@ -573,40 +621,66 @@ form:hover{
     }
 }
 @media (max-width: 311px){
+    .description{
+        margin-left: 17px;
+        font-size: .73rem;
+    }
+
     .start[type="submit"]{
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         padding: 1px 0px;
         width: 47px;
-        margin-left: 81%;
         margin-top: 15px;
-    }
-    #filewrapper .uploaded:first-child{
-        margin-top: -23px;
     }
     .left h3{
         max-width: 170px;
     }  
 }
 @media (max-width: 291px){
+    .location{
+        font-size: 1.1rem;
+    }
+    .description{
+        font-size: .7rem;
+    }
+
     .left h3{
         max-width: 140px;
     }  
 }
 @media (max-width: 275px){
+    .location{
+        font-size: 1rem;
+    }
+    .description{
+        margin-left: 7px;
+        font-size: .685rem;
+    }
+
     .start[type="submit"]{
-        margin-left: 78%;
         margin-top: 14px;
     }
     #filewrapper .uploaded:first-child{
-        margin-top: 1px;
+        margin-top: 5px;
     }
     .left h3{
         max-width: 110px;
     }  
 }
 @media (max-width: 260px){
+    .location{
+        font-size: .93rem;
+    }
+    .description{
+        margin-left: 7px;
+        font-size: .62rem;
+    }
+
+    .startar{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .start[type="submit"]{
-        margin-left: 76%;
         margin-top: 10px; 
     }
 }
