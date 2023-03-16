@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/player.css">
+    <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <title>CS - Player</title>
+    <title>CS - Contact</title>
 </head>
 <main>
     <body>
@@ -22,7 +22,7 @@
                 <li><a href="scanner.html">Scanner</a></li>
                 <li><a href="scripts.html">Scripts</a></li>
                 <li><a href="tutorials.html">Tutorials</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="player.html">Player</a></li>
                 <li><a href="../index.html" class="logout">Logout</a></li>
             </ul>
     
@@ -34,20 +34,23 @@
 
         <div class="location">
             <p class="local">Your Location:</p>
-            <p class="page-title">Pages>Player</p>
+            <p class="page-title">Pages>Contact</p>
         </div>
         
         <section>
-            <div class="wrapper">
-                <div class="box">
-                    <div class="input-bx">
-                        <h2 class="player-title">⚠ COMMING SOON ⚠</h2>
-                    </div>
-                </div>
+            <div class="container">
+                <form action="">
+                    <h1>Contact Us</h1>
+                    <input type="text" id="firstname" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <P>Type Your Message Here:</P>
+                    <textarea required></textarea>
+                    <input type="submit" value="Send" id="btn">
+                </form>
             </div>
         </section>
 
-    <script src="../js/player.js"></script>
+    <script src="../js/contact.js"></script>
     </body>
 </main>
 

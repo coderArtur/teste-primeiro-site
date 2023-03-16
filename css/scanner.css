@@ -133,10 +133,7 @@ section{
     padding: 10px 30px 10px 30px;
     width: 100%;
     border-radius: 5px;
-}
-.box:hover{
-    box-shadow: 0 0 15px 5px #3f3f3f;
-    transition: .7s;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
 
 form:hover{
