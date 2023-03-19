@@ -10,7 +10,7 @@
 main{
     position: relative;
     min-height: 100vh;
-    background: #1e1e20;
+    background: #23242a;
 }
 
 nav{
@@ -112,109 +112,62 @@ nav{
 
 
 section{
-    height: 100vh;
+    height: 50vh;
+}
+
+.wrapper{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px;
+    width: 100%;
+    min-height: 100vh;
     background: #1e1e20;
 }
 
-.container{
-    padding-top: 250px;
-    min-height: 50vh;
-    background: #1e1e20;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.box{
+    margin-top: 300px;
+    max-width: 450px;
+    background-color: #111111;
+    padding: 10px 30px 10px 30px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
 
-.container form{
-    width: 670px;
-    height: 400;
-    display: flex;
-    justify-content: center;
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-    border-radius: 15px;
-    background: #111111;
-    flex-wrap: wrap;
+form:hover{
+    transform: scale(1.03);
+    transition: .5s;
 }
 
-.container form h1{
+.contact-title{
     color: #fff;
-    font-weight: 500;
-    margin-top: 20px;
-    width: 500px;
     text-align: center;
-}
-
-.container form input{
-    width: 290px;
-    height: 40px;
-    color: #fff;
-    padding-left: 10px;
-    outline: none;
-    border: none;
-    font-size: 15px;
-    margin-bottom: 10px;
-    background: none;
-    border-bottom: 2px solid #fff;
-}
-
-.container form input::placeholder{
-    color: #ddd;
-}
-
-.container form #email{
-    margin-left: 20px;
-}
-
-.container form p{
-    color: #fff;
-    font-size: 17px;
-    font-weight: 400;
-    width: 600px;
-    margin-top: 20px;
-}
-
-.container form textarea{
-    background: none;
-    border: 2px solid #c9c9c9;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: 200;
-    font-size: 15px;
-    padding: 10px;
-    outline: none;
-    min-width: 600px;
-    max-width: 600px;
-    min-height: 80px;
-    max-height: 350px;
-}
-
-textarea::-webkit-scrollbar{
-    width: 1rem;
-}
-textarea::-webkit-scrollbar-thumb{
-    background-color: rgba(194, 194, 194, 0.713);
-}
-
-.container form #btn{
-    border: none;
-    background: #fff;
-    border-radius: 5px;
-    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 1.7rem;
     font-weight: 600;
-    font-size: 18px;
-    color: #000000;
-    width: 200px;
-    height: 35px;
-    padding: 0;
-    margin-bottom: 30px;
-    transition: .3s;
-    cursor: pointer;
 }
 
-.container form #btn:hover{
-    box-shadow: 0 0 9px #fff;
-    transition: 0.4s;
+.contact-box a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
 }
+.contact-box a:hover{
+    transform: scale(1.03);
+    transition: .5s;
+}
+.contact-box img{
+    width: 3rem;
+}
+.contact-box h3{
+    color: #d4d4d4;
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
 
 @media (max-width: 1280px){
     nav{
@@ -283,11 +236,6 @@ textarea::-webkit-scrollbar-thumb{
         top: 75px;
         right: -2%;
     }
-
-    .box{
-        max-width: 600px;
-    }
-    
 }
 @media (max-width: 550px){
     .navbar{
@@ -320,13 +268,13 @@ textarea::-webkit-scrollbar-thumb{
     }
 
     .box{
-        max-width: 550px;
+        margin-top: 230px;
+        max-width: 400px;
     }
-}
-
-@media (max-width: 471px){
-    .player-title{
-        font-size: 3rem;
+    
+    .contact-title{
+        margin-bottom: 5px;
+        font-size: 1.3rem;
     }
 }
 @media (max-width: 411px){
@@ -337,6 +285,9 @@ textarea::-webkit-scrollbar-thumb{
         font-size: 1.2rem;
         font-weight: 600;
     }
+    .box{
+        margin-top: 205px;
+    } 
 }
 @media (max-width: 391px){
     .location{
@@ -346,63 +297,68 @@ textarea::-webkit-scrollbar-thumb{
         font-size: 1.2rem;
         font-weight: 600;
     }
+
+    .box{
+        margin-top: 198px;
+    }
 }
 @media (max-width: 381px){
     .location{
+        margin-top: 95px;
         margin-left: 20px;
     }
-}
-@media (max-width: 370px){
-    .player-title{
-        font-size: 2.7rem;
-    }
+
+    .box{
+        margin-top: 190px;
+    } 
 }
 @media (max-width: 350px){
     .location{
         margin-left: 10px;
     }
-}
-@media (max-width: 340px){
-    .player-title{
-        font-size: 2.5rem;
+
+    .box{
+        padding: 10px 20px 10px 20px;
+        margin-top: 190px;
+        max-width: 350px;
+    }
+    
+    .contact-title{
+        font-size: 17px;
     }
 }
 @media (max-width: 330px){
     .location{
         font-size: 1.15rem;
     }
-}
-@media (max-width: 320px){
-    .player-title{
-        font-size: 2.2rem;
+
+    .box{
+        padding: 5px 10px 5px 10px;
+        max-width: 350px;
+    }
+    
+    .contact-title{
+        font-size: 15px;
     }
 }
 @media (max-width: 311px){
-    .location{
-        font-size: 1.1rem;
-    }
+    .description{
+        margin-left: 17px;
+        font-size: .73rem;
+    } 
 }
 @media (max-width: 291px){
     .location{
-        font-size: 1.05rem;
-    }
-    .player-title{
-        font-size: 2rem;
-    }
+        font-size: 1.1rem;
+    } 
 }
 @media (max-width: 275px){
     .location{
-        font-size: .98rem;
-    }
-    .player-title{
-        font-size: 1.8rem;
-    }
+        font-size: 1rem;
+    } 
 }
 @media (max-width: 260px){
     .location{
-        font-size: .91rem;
-    }
-    .player-title{
-        font-size: 1.5rem;
+        font-size: .93rem;
     }
 }
