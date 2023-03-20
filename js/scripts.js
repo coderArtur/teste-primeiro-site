@@ -12,9 +12,11 @@ window.addEventListener("load",()=>{
     const filewrapper = document.getElementById("filewrapper");
     
     input.addEventListener("change",(e)=>{
-        let fileName = e.target.files[0].name;
-        let filetype = e.target.value.split(".").pop();
-        fileshow(fileName, filetype);
+        for (let i = 0; i < e.target.files.length; i++) {
+            let fileName = e.target.files[i].name;
+            let filetype = fileName.split(".").pop();
+            fileshow(fileName, filetype);
+        }
     })
 
     const fileshow=(fileName, filetype)=>{
