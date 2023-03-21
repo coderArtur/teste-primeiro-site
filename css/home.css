@@ -160,7 +160,7 @@ section{
 .tutorials-box:hover,
 .player-box:hover,
 .community-box:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: .5s;
     box-shadow: 0 0 500000px 5000000px #4747476c;
 }
