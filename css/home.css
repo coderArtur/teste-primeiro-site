@@ -160,7 +160,7 @@ section{
 .tutorials-box:hover,
 .player-box:hover,
 .community-box:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: .5s;
     box-shadow: 0 0 500000px 5000000px #4747476c;
 }
@@ -180,6 +180,28 @@ section{
         margin: 0px 20px;
     }
 }
+
+@media (max-width: 976px){
+    .scanner-box,
+    .scripts-box,
+    .tutorials-box,
+    .player-box,
+    .community-box{
+        max-width: 400px;
+        padding: 25px 30px 10px 30px;
+    }
+
+    .title{
+        font-size: 1.4rem;
+    }
+
+    .wrapper img{
+        max-width: 350px;
+        border-radius: 7px;
+
+    } 
+}
+
 @media (max-width: 880px){
     nav{
         padding: 10px 2%;
@@ -246,7 +268,6 @@ section{
         font-weight: 600;
     }
 
-
     .scanner-box,
     .scripts-box,
     .tutorials-box,
@@ -267,7 +288,10 @@ section{
     }
 }
 
-@media (max-width: 759px){
+@media (max-width: 776px){
+    .wrapper{
+        min-height: 0vh;
+    }
     .scanner-box,
     .scripts-box,
     .tutorials-box,
@@ -287,7 +311,7 @@ section{
     }
 }
 
-@media (max-width: 639px){
+@media (max-width: 656px){
     .location{
         font-size: 1.7rem;
     }
@@ -314,7 +338,7 @@ section{
     }
 }
 
-@media (max-width: 550px){
+@media (max-width: 560px){
     .location{
         margin-top: 90px;
     }
@@ -346,7 +370,6 @@ section{
     }
 
     .wrapper{
-        min-height: 0vh;
         margin-top: 170px
     }
 
