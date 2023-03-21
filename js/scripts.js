@@ -19,6 +19,16 @@ window.addEventListener("load",()=>{
         }
     })
 
+    input.addEventListener("change",(e)=>{
+        for (let i = 0; i < e.target.files.length; i++) {
+            let fileName = e.target.files[i].name;
+            let filetype = fileName.split(".").pop();
+            if (filetype === 'txt') {
+                fileshow(fileName, filetype);
+            }
+        }
+    })
+
     const fileshow=(fileName, filetype)=>{
         const showfileboxElem = document.createElement("div");
         showfileboxElem.classList.add("showfilebox");
