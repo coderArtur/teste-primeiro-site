@@ -10,14 +10,6 @@ menu.onclick = ()=>{
 window.addEventListener("load",()=>{
     const input = document.getElementById("upload");
     const filewrapper = document.getElementById("filewrapper");
-    
-    input.addEventListener("change",(e)=>{
-        for (let i = 0; i < e.target.files.length; i++) {
-            let fileName = e.target.files[i].name;
-            let filetype = fileName.split(".").pop();
-            fileshow(fileName, filetype);
-        }
-    })
 
     input.addEventListener("change",(e)=>{
         for (let i = 0; i < e.target.files.length; i++) {
