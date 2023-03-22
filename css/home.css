@@ -131,7 +131,7 @@ section{
     align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
-    min-height: 100vh;
+    /*min-height: 100vh;*/
     background: #1e1e20;
 }
 
@@ -289,9 +289,9 @@ section{
 }
 
 @media (max-width: 776px){
-    .wrapper{
+    /*.wrapper{
         min-height: 0vh;
-    }
+    }*/
     .scanner-box,
     .scripts-box,
     .tutorials-box,
