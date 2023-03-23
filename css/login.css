@@ -14,11 +14,13 @@ main{
 }
 
 body{
+    position: relative;
     background: #1e1e20;
 }
 
 header{
-    top: 25px;    
+    position: fixed;
+    top: 25px;
 }
 
 .title{
@@ -42,15 +44,17 @@ header{
 }
 
 section{
-    margin-top: 30px;
+    position: absolute;
+    margin-top: 150px;
     height: 75vh;
+    background-color: red;
 }
 
 .box{
     z-index: 3;
     position: relative;
     width: 360px;
-    height: 375px;
+    height: 360px;
     background: #111111;
     border-radius: 8px;
     overflow: hidden;
@@ -63,10 +67,9 @@ section{
 
 .box.active{
     z-index: 3;
-    margin-top: 40px;
     position: relative;
     width: 360px;
-    height: 519px;
+    height: 475px;
     background: #111111;
     border-radius: 8px;
     overflow: hidden;
@@ -77,6 +80,7 @@ section{
     inset: 4px;
     background: #161616;
     padding: 40px 25px;
+    margin-bottom: 200px;
     border-radius: 8px;
     z-index: 2;
     display: flex;
@@ -100,24 +104,25 @@ section{
     text-align: center;
     letter-spacing: 0.1em;
     margin-top: -20px;
+    margin-bottom: 25px;
 }
 
 .box form .inputBox{
     position: relative;
     width: 300px;
-    margin-top: 35px;
+    margin-top: 40px;
 }
 
 .box form .inputBox input{
     position: relative;
     width: 100%;
-    padding: 20px 10px 10px;
+    padding: 10px 10px 4px;
     background: transparent;
     outline: none;
     border: none;
     box-shadow: none;
     color: #23242a;
-    font-size: 1em;
+    font-size: .9em;
     letter-spacing: 0.05em;
     transition: 0.3s;
     z-index: 10;
@@ -125,8 +130,8 @@ section{
 
 .box form .inputBox span{
     position: absolute;
-    left: 0;
-    padding: 20px 0px 10px;
+    left: 5px;
+    padding: 10px 0px 0px;
     pointer-events: none;
     color: #8f8f8f;
     font-size: 1em;
@@ -138,7 +143,7 @@ section{
 .box form .inputBox input:focus ~ span{
     color: #fff;
     font-size: 0.75em;
-    transform: translateY(-34px);
+    transform: translateY(-30px);
 }
 
 .box form .inputBox i{
@@ -156,7 +161,7 @@ section{
 
 .box form .inputBox input:valid ~ i,
 .box form .inputBox input:focus ~ i{
-    height: 44px;
+    height: 30px;
 }
 
 .box form .links{
@@ -191,26 +196,28 @@ section{
 .box form input[type="submit"]{
     border: none;
     outline: none;
-    padding: 9px 25px;
+    padding: 5px 20px;
     background: #f5f5f5;
     cursor: pointer;
     font-size: 0.9em;
     border-radius: 4px;
     font-weight: 600;
-    width: 100px;
+    width: 80px;
+    height: 40px;
     margin-top: 10px;
 }
 
 .box.active form input[type="submit"]{
     border: none;
     outline: none;
-    padding: 9px 25px;
+    padding: 5px 10px;
     background: #f5f5f5;
     cursor: pointer;
     font-size: 0.9em;
     border-radius: 4px;
     font-weight: 600;
-    width: 100px;
+    width: 80px;
+    height: 40px;
     margin-top: -70px;
 }
 
@@ -255,19 +262,18 @@ section{
     }
 
     section{
-        margin-top: 100px;
+        margin-top: 80px;
         height: 75vh;
     }
 
     .box{
         width: 330px;
-        height: 347px;
+        height: 333px;
     }
 
     .box.active{
-        margin-top: 40px;
         width: 330px;
-        height: 483px;
+        height: 440px;
     }
 
     .box form,
@@ -280,7 +286,6 @@ section{
     }
 
     .box.active form input[type="submit"]{
-        padding: 7px 25px;
         margin-top: -65px;
     }
 }
@@ -302,13 +307,12 @@ section{
 
     .box{
         width: 300px;
-        height: 330px;
+        height: 318px;
     }
     
     .box.active{
-        margin-top: 27px;
         width: 300px;
-        height: 453px;
+        height: 436px;
     }
 
     .box form,
@@ -317,12 +321,11 @@ section{
     }
 
     .box form h2{
-        padding-bottom: 20px;
+        margin-bottom: 20px;
     }
     
     .box form .inputBox{
         width: 272px;
-        margin-top: 23px;
     }
 
     .box form .inputBox span,
@@ -339,7 +342,6 @@ section{
     }
 
     .box form input[type="submit"]{
-        padding: 7px 25px;
         margin-top: 0px;
     }
 
@@ -360,27 +362,6 @@ section{
     section{
         margin-top: 20px;
     }
-
-    .box.active{
-        margin-top: 15px;
-    }
-
-    .box form .inputBox span,
-    .box.active form .inputBox span{
-        font-size: 0.9em;
-    }
-
-    .box form .inputBox i{
-        position: absolute;
-        left: 0;
-        bottom: 5px;
-        width: 100%;
-    }
-
-    .box form .inputBox input:valid ~ i,
-    .box form .inputBox input:focus ~ i{
-        height: 35px;
-    }
 }
 
 @media (max-width: 400px){
@@ -398,7 +379,7 @@ section{
 
     .box{
         width: 285px;
-        height: 329px;
+        height: 318px;
     }
     
     .box.active{
@@ -431,12 +412,12 @@ section{
 
     .box{
         width: 250px;
-        height: 316px;
+        height: 305px;
     }
     
     .box.active{
         width: 250px;
-        height: 440px;
+        height: 423px;
     }
 
     .box form,
@@ -445,7 +426,9 @@ section{
     }
 
     .box form h2{
-        padding-bottom: 10px;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        padding-top: 5px;
     }
 
     .box form .inputBox{

@@ -136,7 +136,7 @@ section{
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
 
-form:hover{
+.todoupload:hover{
     transform: scale(1.03);
     transition: .5s;
 }
