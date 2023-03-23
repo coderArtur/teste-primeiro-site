@@ -49,26 +49,156 @@ section{
     height: 75vh;
 }
 
+.popup-wrapper{
+    display: none;
+    background: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.popup{
+    width: 100%;
+    max-width: 400px;
+    margin: 20% auto;
+    padding: 20px;
+    background: #111111;
+    border-radius: 8px;
+    border: solid 2px rgb(128, 128, 128);
+    box-shadow: 0 0 20px 1px #3f3f3f;
+    position: relative;
+}
+.popup-content{
+    color: #fff;
+}
+
+.popup-close{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.popup-close span{
+    background: #ffffff;
+    color: #000000;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.popup-close span:hover{
+    background: #cecece;
+}
+
+.popup-content h2{
+    margin: 10px 0;
+    font-size: 1.6rem;
+}
+.popup-content h3{
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+.popup-content .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: -5px;
+    margin-bottom: 15px;
+}
+
+.popup-content .inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 10px 10px 2px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.3s;
+    z-index: 8;
+}
+
+.popup-content .inputBox span{
+    position: absolute;
+    left: 5px;
+    padding: 10px 0px 10px;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.3s;
+}
+
+.popup-content .inputBox input:valid ~ span,
+.popup-content .inputBox input:focus ~ span{
+    display: none;
+}
+
+.popup-content .inputBox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.popup-content .inputBox input:valid ~ i,
+.popup-content .inputBox input:focus ~ i{
+    height: 30px;
+}
+
+.send[type="submit"]{
+    border: none;
+    outline: none;
+    padding: 4px 0px;
+    background: #f5f5f5;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 70px;
+    margin-top: 5px;
+}
+
+.send[type="submit"]:hover{
+    background: #fff;
+    box-shadow: 0 0 8px #fff;
+    transition: 0.4s;
+}
+
 .box{
     z-index: 3;
     position: relative;
     width: 360px;
-    height: 360px;
+    height: 314px;
     background: #111111;
     border-radius: 8px;
     overflow: hidden;
-}
-
-.box:hover{
-    box-shadow: 0 0 15px 5px #3f3f3f;
-    transition: .7s;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
 
 .box.active{
     z-index: 3;
     position: relative;
     width: 360px;
-    height: 475px;
+    height: 437px;
     background: #111111;
     border-radius: 8px;
     overflow: hidden;
@@ -78,8 +208,7 @@ section{
     position: absolute;
     inset: 4px;
     background: #161616;
-    padding: 40px 25px;
-    margin-bottom: 200px;
+    padding: 25px 11px;
     border-radius: 8px;
     z-index: 2;
     display: flex;
@@ -90,7 +219,7 @@ section{
     position: absolute;
     inset: 4px;
     background: #161616;
-    padding: 40px 25px;
+    padding: 25px 11px;
     border-radius: 8px;
     z-index: 2;
     display: flex;
@@ -103,12 +232,12 @@ section{
     text-align: center;
     letter-spacing: 0.1em;
     margin-top: -20px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .box form .inputBox{
     position: relative;
-    width: 300px;
+    width: 330px;
     margin-top: 40px;
 }
 
@@ -169,10 +298,12 @@ section{
 }
 
 .box form .links a{
+    padding: 0 0 0 5px;
     margin: 20px 0;
-    font-size: 0.75em;
+    font-size: 0.83em;
     color: #8f8f8f;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .box.active form .links a{
@@ -187,8 +318,7 @@ section{
     text-shadow: 0 0 10px #fff;
 }
 
-.box form .links a:hover,
-.box form .links a:nth-child(2){
+.box form .links a:hover{
     color: #fff;
 }
 
@@ -203,7 +333,6 @@ section{
     font-weight: 600;
     width: 80px;
     height: 40px;
-    margin-top: 10px;
 }
 
 .box.active form input[type="submit"]{
@@ -252,7 +381,7 @@ section{
 @media (max-width: 880px){
     header{
         position: absolute;
-        top: 30px; 
+        top: 30px;
     }
 
     header .title h1{
@@ -266,17 +395,21 @@ section{
 
     .box{
         width: 330px;
-        height: 333px;
+        height: 313px;
     }
 
     .box.active{
         width: 330px;
-        height: 440px;
+        height: 432px;
     }
 
     .box form,
     .box.active form{
         padding: 25px 11px;
+    }
+
+    .box form .inputBox{
+        width: 300px;
     }
 
     .box.active form .links a{
@@ -357,6 +490,49 @@ section{
     section{
         margin-top: 20px;
     }
+
+    .popup{
+        max-width: 300px;
+        padding: 10px;
+    }
+    
+    .popup-content h2{
+        font-size: 1.3rem;
+    }
+    
+    .popup-content p{
+        font-size: .9rem;
+    }
+    .popup-content h3{
+        font-size: 1rem;
+    }
+
+    .popup-content .inputBox input{
+        padding-left: 5px;
+        font-size: .85rem;
+    }
+    
+    .popup-content .inputBox span{
+        padding: 7px 0px 10px;
+        font-size: .85em;
+    }
+
+    .popup-content .inputBox i{
+        bottom: 1px;
+    }
+
+    .popup-content .inputBox input:valid ~ i,
+    .popup-content .inputBox input:focus ~ i{
+        height: 23px;
+    }
+    
+    .send[type="submit"]{
+        font-size: 0.85rem;
+    }
+
+    .box form .links a{
+        font-size: 0.75em;
+    }
 }
 @media (max-width: 400px){
     header{
@@ -369,6 +545,31 @@ section{
 
     section{
         margin-top: -10px;
+    }
+
+    .popup{
+        max-width: 280px;
+    }
+    
+    .popup-content h2{
+        font-size: 1.2rem;
+    }
+    
+    .popup-content p{
+        font-size: .8rem;
+    }
+    .popup-content h3{
+        font-size: .9rem;
+    }
+    
+    .popup-content .inputBox span{
+        font-size: .8em;
+    }
+    
+    .send[type="submit"]{
+        padding: 3px 0px;
+        font-size: 0.8rem;
+        width: 60px;
     }
 
     .box{
@@ -401,6 +602,40 @@ section{
 
     header .title h1{
         font-size: 30px;
+    }
+
+    .popup{
+        max-width: 240px;
+    }
+    
+    .popup-content h2{
+        font-size: 1rem;
+    }
+    
+    .popup-content p{
+        font-size: .75rem;
+    }
+    .popup-content h3{
+        font-size: .8rem;
+    }
+
+    .popup-content .inputBox input{
+        padding-left: 5px;
+        font-size: .75rem;
+    }
+    
+    .popup-content .inputBox span{
+        font-size: .75rem;
+    }
+    
+    .popup-content .inputBox i{
+        bottom: 0px;
+    }
+    
+    .send[type="submit"]{
+        padding: 2px 0px;
+        font-size: 0.75rem;
+        width: 55px;
     }
 
     .box{
