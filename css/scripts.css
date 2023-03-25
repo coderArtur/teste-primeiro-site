@@ -122,9 +122,9 @@ nav{
     font-weight: 600;
     text-decoration: underline;
 }
-.description p:nth-child(2){
+/* .description p:nth-child(2){
     color: #c0c0c0;
-}
+} */
 
 
 section{
@@ -152,7 +152,7 @@ section{
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
 
-form:hover{
+form .upload-file:hover{
     transform: scale(1.03);
     transition: .5s;
 }
@@ -187,7 +187,7 @@ form:hover{
     font-weight: 600;
 }
 
-.startar{
+/* .startar{
     display: flex;
     justify-content: space-between;
     padding-left: 50px;
@@ -215,7 +215,61 @@ form:hover{
 }
 .start[type="submit"]:nth-child(2){
     background: #c0c0c0;
-}
+} */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+  }
+  
+  .dropdown-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    min-width: 110px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.4s ease;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    color: #fff;
+    padding: 5px 10px;
+    min-width: 110px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.4s ease;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #444;
+  }
+  
+  .dropdown:hover .dropdown-btn {
+    background-color: #585858;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    max-height: 300px;
+  }
+  
+
 
 .uploaded{
     margin: -10px 0 8px 8px;
@@ -244,6 +298,10 @@ form:hover{
     align-items: center;
     flex-wrap: wrap;
     gap: 7px;
+}
+
+#filewrapper p{
+    margin-left: -0px;
 }
 
 .filetype{
@@ -409,7 +467,7 @@ form:hover{
         font-size: 13px;
     }
 
-    .start[type="submit"]{
+    /* .start[type="submit"]{
         padding: 4px 0px;
         margin-top: 20px;
     }
@@ -418,7 +476,7 @@ form:hover{
         background: #fff;
         box-shadow: 0 0 8px #fff;
         transition: 0.4s;
-    }
+    } */
 
     .uploaded{
         margin: -10px 0 8px 8px;
@@ -456,7 +514,7 @@ form:hover{
         margin-top: 205px;
     }
 
-    .startar{
+    /* .startar{
         padding-left: 30px;
         padding-right: 30px;
     }
@@ -465,7 +523,7 @@ form:hover{
         padding: 3px 0px;
         width: 60px;
         margin-top: 20px;
-    }
+    } */
 
     .uploaded{
         margin: -5px 0 8px 8px;
@@ -517,9 +575,9 @@ form:hover{
         margin-top: 190px;
     }
 
-    .start[type="submit"]{
+    /* .start[type="submit"]{
         width: 55px;
-    }
+    } */
 
     .left h3{
         max-width: 185px;
@@ -622,12 +680,12 @@ form:hover{
         font-size: .73rem;
     }
 
-    .start[type="submit"]{
+    /* .start[type="submit"]{
         font-size: 0.7rem;
         padding: 1px 0px;
         width: 47px;
         margin-top: 15px;
-    }
+    } */
     .left h3{
         max-width: 170px;
     }  
@@ -653,9 +711,9 @@ form:hover{
         font-size: .685rem;
     }
 
-    .start[type="submit"]{
+    /* .start[type="submit"]{
         margin-top: 14px;
-    }
+    } */
     #filewrapper .uploaded:first-child{
         margin-top: 5px;
     }
@@ -672,11 +730,11 @@ form:hover{
         font-size: .62rem;
     }
 
-    .startar{
+    /* .startar{
         padding-left: 20px;
         padding-right: 20px;
     }
     .start[type="submit"]{
         margin-top: 10px; 
-    }
+    } */
 }

@@ -39,9 +39,9 @@
         </div>
 
         <div class="description">
-            <p>1: CREATE COMBO FROM M3U LINK!</p>
-            <p>2: TRANSFORM COMBOS INTO M3U LINK!</p>
-            <p>3: MERGE COMBOS BY REMOVING DUPLICATES!</p>
+            <p>SCRIPT 1: Create combo from m3u link!</p>
+            <p>SCRIPT 2: Transform combos into m3u link!</p>
+            <p>SCRIPT 3: Merge combos by removing duplicates!</p>
         </div>
         
         <section>
@@ -50,17 +50,28 @@
                     <div class="input-bx">
                         <h2 class="upload-area-title">Upload File</h2>
                         <form action="">
-                            <input type="file" id="upload" accept=".txt" hidden multiple>
+                            <div class="upload-file">
+                                <input type="file" id="upload" accept=".txt" hidden multiple>
                             <label for="upload" class="uploadlabel">
                                 <span><i class="fa fa-cloud-upload"></i></span>
                                 <p>Click To Upload</p>
                             </label>
+                            </div>
+                    
+                            <div class="dropdown">
+                                <button class="dropdown-btn">Choose a Script!</button>
+                                <div class="dropdown-content">
+                                    <a type="submit" href="#">Start Script 1</a>
+                                    <a type="submit" href="#">Start Script 2</a>
+                                    <a type="submit" href="#">Start Script 3</a>
+                                </div>
+                            </div>
                         </form>
-                        <div class="startar">
+                        <!-- <div class="startar">
                             <input class="start" type="submit" href="#" value="1. Start">
                             <input id="second-start" class="start"  type="submit" href="#" value="2. Start">
                             <input class="start" type="submit" href="#" value="3. Start">
-                        </div>
+                        </div> -->
                     </div>
         
                     <div id="filewrapper">
