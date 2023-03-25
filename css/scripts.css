@@ -210,14 +210,6 @@ form .upload-file:hover{
     cursor: pointer;
     transition: all 0.4s ease;
   }
-
-  .dropdown-btn.active {
-    background-color: #444;
-  }
-  
-  .dropdown-btn.active + .dropdown-content {
-    display: block;
-  }
   
   .dropdown-content {
     position: absolute;

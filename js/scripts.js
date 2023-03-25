@@ -11,17 +11,15 @@ const dropdownBtn = document.querySelector('.dropdown-btn');
 const dropdownContent = document.querySelector('.dropdown-content');
 
 dropdownBtn.addEventListener('click', function() {
-    dropdownBtn.classList.toggle('active');
-    dropdownContent.classList.toggle('show');
-  });
-  
-  dropdownContent.addEventListener('click', function(e) {
-    if (e.target.tagName === 'A') {
-      dropdownBtn.innerHTML = e.target.innerHTML;
-      dropdownBtn.classList.remove('active');
-      dropdownContent.classList.remove('show');
-    }
-  });
+  dropdownContent.classList.toggle('show');
+});
+
+dropdownContent.addEventListener('click', function(e) {
+  if (e.target.tagName === 'A') {
+    dropdownContent.classList.remove('show');
+    dropdownBtn.innerHTML = e.target.innerHTML;
+  }
+});
 
 
 window.addEventListener("load",()=>{
