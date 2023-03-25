@@ -11,14 +11,14 @@ const dropdownBtn = document.querySelector('.dropdown-btn');
 const dropdownContent = document.querySelector('.dropdown-content');
 
 dropdownBtn.addEventListener('click', function() {
-  dropdownContent.classList.toggle('show');
+    dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px';
 });
-
+  
 dropdownContent.addEventListener('click', function(e) {
-  if (e.target.tagName === 'A') {
-    dropdownContent.classList.remove('show');
-    dropdownBtn.innerHTML = e.target.innerHTML;
-  }
+    if (e.target.tagName === 'A') {
+        dropdownBtn.innerHTML = e.target.innerHTML;
+        dropdownContent.style.maxHeight = '0';
+    }
 });
 
 
