@@ -187,40 +187,16 @@ form .upload-file:hover{
     font-weight: 600;
 }
 
-/* .startar{
+.startar{
     display: flex;
     justify-content: space-between;
-    padding-left: 50px;
-    padding-right: 50px;
-    justify-content: space-between;
+
 }
-.start[type="submit"]{
-    display: inline-block;
-    justify-content: space-between;
-    border: none;
-    outline: none;
-    padding: 4px 0px;
-    background: #f5f5f5;
-    cursor: pointer;
-    font-size: 0.9em;
-    border-radius: 4px;
-    font-weight: 600;
-    width: 70px;
-    margin-top: 20px;
-}
-.start[type="submit"]:hover{
-    background: #fff;
-    box-shadow: 0 0 8px #fff;
-    transition: 0.4s;
-}
-.start[type="submit"]:nth-child(2){
-    background: #c0c0c0;
-} */
 
 .dropdown {
     position: relative;
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 20px;
   }
   
   .dropdown-btn {
@@ -228,11 +204,19 @@ form .upload-file:hover{
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 6px 10px;
-    min-width: 110px;
-    font-size: 14px;
+    padding: 4px 10px;
+    min-width: 113px;
+    font-size: 0.9rem;
     cursor: pointer;
     transition: all 0.4s ease;
+  }
+
+  .dropdown-btn.active {
+    background-color: #444;
+  }
+  
+  .dropdown-btn.active + .dropdown-content {
+    display: block;
   }
   
   .dropdown-content {
@@ -251,8 +235,8 @@ form .upload-file:hover{
     display: block;
     color: #fff;
     padding: 5px 10px;
-    min-width: 110px;
-    font-size: 14px;
+    min-width: 113px;
+    font-size: 0.9rem;
     text-decoration: none;
     transition: background-color 0.4s ease;
   }
@@ -269,7 +253,25 @@ form .upload-file:hover{
     max-height: 300px;
   }
   
-
+  .start[type="submit"]{
+    display: inline-block;
+    justify-content: space-between;
+    border: none;
+    outline: none;
+    padding: 4px 0px;
+    background: #f5f5f5;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 70px;
+    margin-top: 20px;
+}
+.start[type="submit"]:hover{
+    background: #fff;
+    box-shadow: 0 0 8px #fff;
+    transition: 0.4s;
+}
 
 .uploaded{
     margin: -10px 0 8px 8px;

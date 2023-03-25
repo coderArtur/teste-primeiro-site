@@ -39,9 +39,9 @@
         </div>
 
         <div class="description">
-            <p>SCRIPT 1: Create combo from m3u link!</p>
-            <p>SCRIPT 2: Transform combos into m3u link!</p>
-            <p>SCRIPT 3: Merge combos by removing duplicates!</p>
+            <p>SCRIPT 1: Create wordlist from m3u link!</p>
+            <p>SCRIPT 2: Transform wordlist into m3u link!</p>
+            <p>SCRIPT 3: Merge wordlists by removing duplicates!</p>
         </div>
         
         <section>
@@ -51,20 +51,23 @@
                         <h2 class="upload-area-title">Upload File</h2>
                         <form action="">
                             <div class="upload-file">
-                                <input type="file" id="upload" accept=".txt" hidden multiple>
-                            <label for="upload" class="uploadlabel">
-                                <span><i class="fa fa-cloud-upload"></i></span>
-                                <p>Click To Upload</p>
-                            </label>
+                                <input type="file" id="upload" accept=".txt" required="required" hidden multiple>
+                                <label for="upload" class="uploadlabel">
+                                    <span><i class="fa fa-cloud-upload"></i></span>
+                                    <p>Click To Upload</p>
+                                </label>
                             </div>
-                    
-                            <div class="dropdown">
-                                <button class="dropdown-btn">Choose a Script!</button>
-                                <div class="dropdown-content">
-                                    <a type="submit" href="#">Start Script 1</a>
-                                    <a type="submit" href="#">Start Script 2</a>
-                                    <a type="submit" href="#">Start Script 3</a>
+                            
+                            <div class="startar">
+                                <div class="dropdown">
+                                    <button class="dropdown-btn">Choose a Script!</button>
+                                    <div class="dropdown-content" required="required">
+                                        <a href="#">Start Script 1</a>
+                                        <a href="#">Start Script 2</a>
+                                        <a href="#">Start Script 3</a>
+                                    </div>
                                 </div>
+                                <input class="start" type="submit" href="#" value="Start">
                             </div>
                         </form>
                         <!-- <div class="startar">
