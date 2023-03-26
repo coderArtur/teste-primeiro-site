@@ -256,6 +256,16 @@ section{
     z-index: 10;
 }
 
+.box form .inputBox input:-webkit-autofill{
+    height: 30px;
+    margin-top: 4px;
+    padding: 7px 10px 4px;
+    box-shadow: 0 0 0px 1000px white inset;
+    border-radius: 5px;
+    font-size: .9em;
+    -webkit-text-fill-color: #23242a;
+}
+
 .box form .inputBox span{
     position: absolute;
     left: 5px;
@@ -586,6 +596,10 @@ section{
         padding: 25px 10px;
     }
 
+    .box form .inputBox input:-webkit-autofill {
+        font-size: .87em;
+    }
+
     .box form .inputBox span,
     .box.active form .inputBox span{
         font-size: 0.87em;
@@ -663,8 +677,14 @@ section{
         width: 225px;
     }
 
+    .box form .inputBox input:-webkit-autofill {
+        padding: 7px 10px 4px;
+        font-size: .8em;
+
+    }
+
     .box form .inputBox span,
     .box.active form .inputBox span{
-        font-size: 0.83em;
+        font-size: 0.8em;
     }
 }
